@@ -73,6 +73,7 @@ public class InteractionController : MonoBehaviour
             else
             {
                 toolController.DropCurrentTool();
+                buferToolItem = null;
             }
         }
     }
