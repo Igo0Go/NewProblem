@@ -1,22 +1,24 @@
-﻿using System;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class Door : TwoStateInteractiveObject, IHaveEnergy
+public class RoomLight : TwoStateInteractiveObject, IHaveEnergy
 {
-    [Header("Only two rooms")]
-    public List<Room> Rooms = new List<Room>();
-    public bool Open
+    public List<Light> Lights = new List<Light>();
+    public bool OnOff
     {
         get
         {
-            return open;
+            return onOff;
         }
         set
         {
-            open = value;
+            foreach(var l in Lights)
+            {
+                l.enabled = value;
+            }
+            onOff = value;
         }
     }
 
@@ -38,8 +40,8 @@ public class Door : TwoStateInteractiveObject, IHaveEnergy
             }
 
             if (value)
-                Open = false;
-            
+                OnOff = false;
+
             energy = value;
         }
     }
@@ -47,25 +49,18 @@ public class Door : TwoStateInteractiveObject, IHaveEnergy
     public int Capasity { get => capasity; set => capasity = value; }
 
     [Header("Не трогать")]
-    [SerializeField] private bool open = false;
+    [SerializeField] private bool onOff = false;
     [SerializeField] private bool energy = true;
     [SerializeField] private int capasity = 1;
 
-    private EnergyRelay energyRelay = HealthSystem.Instant;
-    public Room GetOtherRoom(Room room)
-    {
-        if (Rooms[0] == room)
-            return Rooms[1];
-        else
-            return Rooms[0];
-    }
+    private EnergyRelay energyRelay = LightSystem.Instant;
 
     protected override void Command()
     {
         base.Command();
 
         if (Energy)
-            Open = !Open;
+            OnOff = !OnOff;
     }
 
     // Use this for initialization
