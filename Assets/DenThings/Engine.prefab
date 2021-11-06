@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 8203827306124824960}
   - component: {fileID: 6995363529817654460}
   - component: {fileID: 6576552522222401002}
+  - component: {fileID: 3913401361044573017}
   m_Layer: 0
   m_Name: Engine
   m_TagString: Untagged
@@ -266,6 +267,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7037502782376635450, guid: cdb5f65fb01cbb145959a286f754fe9d, type: 3}
+--- !u!114 &3913401361044573017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594906699952802449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc54dc413b22347488e9266608daa51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistancePerSec: 0.00625
+  CurrentEnergy: 1
+  energy: 1
+  capasity: 8
 --- !u!1 &1855213528637034679
 GameObject:
   m_ObjectHideFlags: 0

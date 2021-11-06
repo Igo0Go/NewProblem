@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(Collider))]
+//[RequireComponent(typeof(Collider))]
 public class InteractiveObject : MonoBehaviour
 {
     [SerializeField] private ToolTipe toolForUse;
     [SerializeField] protected string defaultMessage;
 
+    public bool ReadyToUse = false;
+
     public Action defaultMessageChanged;
 
     public void Use(ToolController toolController)
     {
-        if(toolForUse == ToolTipe.None || toolController.currentTool == toolForUse)
+        if((toolForUse == ToolTipe.None || toolController.currentTool == toolForUse) && ReadyToUse)
         {
             Command();
             if(toolForUse != ToolTipe.Drone)
