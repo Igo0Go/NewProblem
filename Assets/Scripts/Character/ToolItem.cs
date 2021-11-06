@@ -4,11 +4,28 @@ using UnityEngine;
 public class ToolItem : MonoBehaviour
 {
     public ToolTipe type;
-    public string toolName;
 
     public string GetMessage()
     {
-        return "E - " + "подобрать " + toolName;
+        return "E - " + "подобрать " + GetToolName(type);
+    }
+
+    public static string GetToolName(ToolTipe type)
+    {
+        string result = string.Empty;
+        switch (type)
+        {
+            case ToolTipe.DuctTape:
+                result = "Изолента";
+                break;
+            case ToolTipe.Drone:
+                result = "Ремонтный дрон";
+                break;
+            case ToolTipe.FireExtinguisher:
+                result = "Огнетушитель";
+                break;
+        }
+        return result;
     }
 }
 

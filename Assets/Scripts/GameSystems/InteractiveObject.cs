@@ -7,7 +7,6 @@ public class InteractiveObject : MonoBehaviour
 {
     [SerializeField] private ToolTipe toolForUse;
     [SerializeField] private string defaultMessage;
-    [SerializeField] private string errorMessage;
 
     public void Use(ToolController toolController)
     {
@@ -29,7 +28,7 @@ public class InteractiveObject : MonoBehaviour
         }
         else
         {
-            return errorMessage;
+            return "Вы не можете " + defaultMessage + ". Нужен инструмент: " + ToolItem.GetToolName(toolForUse);
         }
     }
 
