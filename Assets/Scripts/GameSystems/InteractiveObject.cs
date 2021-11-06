@@ -14,6 +14,10 @@ public class InteractiveObject : MonoBehaviour
         if(toolForUse == ToolTipe.None || toolController.currentTool == toolForUse)
         {
             Command();
+            if(toolForUse != ToolTipe.Drone)
+            {
+                toolController.SpendTool();
+            }
         }
     }
 

@@ -27,4 +27,10 @@ public class ToolController : MonoBehaviour
         toolObjects[(int)currentTool].SetActive(true);
         Destroy(tool.gameObject);
     }
+
+    public void SpendTool()
+    {
+        toolObjects.ForEach(g => g.SetActive(false));
+        currentTool = ToolTipe.None;
+    }
 }
