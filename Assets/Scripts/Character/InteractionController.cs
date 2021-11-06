@@ -40,7 +40,6 @@ public class InteractionController : MonoBehaviour
                 if(buferCollider.TryGetComponent<InteractiveObject>(out buferInteractiveObject))
                 {
                     changeMessageEvent?.Invoke(buferInteractiveObject.GetMessage(toolController));
-                    return;
                 }
                 else if(buferCollider.TryGetComponent<ToolItem>(out buferToolItem))
                 {
@@ -53,6 +52,7 @@ public class InteractionController : MonoBehaviour
             changeMessageEvent?.Invoke(string.Empty);
             buferCollider = null;
             buferInteractiveObject = null;
+            buferToolItem = null;
         }
     }
 
@@ -67,14 +67,13 @@ public class InteractionController : MonoBehaviour
             if(buferToolItem != null)
             {
                 toolController.ChangeTool(buferToolItem);
-                buferToolItem = null;
-                buferCollider = null;
             }
             else
             {
                 toolController.DropCurrentTool();
-                buferToolItem = null;
             }
+            buferToolItem = null;
+            buferCollider = null;
         }
     }
 }
