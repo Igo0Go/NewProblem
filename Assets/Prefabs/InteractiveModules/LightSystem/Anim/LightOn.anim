@@ -82,7 +82,20 @@ AnimationClip:
     path: Spot Light
     classID: 108
     script: {fileID: 0}
-  m_PPtrCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: 455cd5528013c104c9a1680a29a68a3c, type: 2}
+    - time: 0.016666668
+      value: {fileID: 2100000, guid: 455cd5528013c104c9a1680a29a68a3c, type: 2}
+    - time: 0.31666666
+      value: {fileID: 2100000, guid: af0cbfd9dfcea9b498710e87237fa53e, type: 2}
+    - time: 0.33333334
+      value: {fileID: 2100000, guid: af0cbfd9dfcea9b498710e87237fa53e, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: 
+    classID: 23
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -104,13 +117,24 @@ AnimationClip:
       typeID: 108
       customType: 0
       isPPtrCurve: 0
-    pptrCurveMapping: []
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 2100000, guid: 455cd5528013c104c9a1680a29a68a3c, type: 2}
+    - {fileID: 2100000, guid: 455cd5528013c104c9a1680a29a68a3c, type: 2}
+    - {fileID: 2100000, guid: af0cbfd9dfcea9b498710e87237fa53e, type: 2}
+    - {fileID: 2100000, guid: af0cbfd9dfcea9b498710e87237fa53e, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.33333334
+    m_StopTime: 0.35000002
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
