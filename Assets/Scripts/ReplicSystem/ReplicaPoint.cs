@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReplicPointScript : LogicModule
+public class ReplicaPoint : LogicModule
 {
     public ReplicDispetcher replicDispether;
     public List<ReplicItem> replicas;
@@ -13,7 +13,7 @@ public class ReplicPointScript : LogicModule
         PlayReplicas();
     }
 
-    [ContextMenu("Р”РѕР±Р°РІРёС‚СЊ СЌС‚Рё СЂРµРїР»РёРєРё")]
+    [ContextMenu("Добавить эти реплики")]
     public void PlayReplicas()
     {
         replicDispether.AddInList(replicas);
