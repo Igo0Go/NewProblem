@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Engine : MonoBehaviour, IHaveEnergy
 {
-    public float DistancePerSec = 0.00625f;
 
     private EngineSystem energyRelay = EngineSystem.Instant;
 
@@ -31,7 +30,7 @@ public class Engine : MonoBehaviour, IHaveEnergy
     {
         if (Energy)
         {
-            energyRelay.CurrentDistance += CurrentEnergy * DistancePerSec * Time.fixedDeltaTime;
+            energyRelay.CurrentDistance += CurrentEnergy * energyRelay.DistancePerSec * Time.fixedDeltaTime;
         }
     }
 }

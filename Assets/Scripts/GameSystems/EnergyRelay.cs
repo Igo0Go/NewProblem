@@ -4,18 +4,23 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class EnergyRelay
+public abstract class EnergyRelay : IHaveEnergy, IHaveMaxEnergy
 {
+    public bool Energy { get => CurrentEnergy > 0; set { } }
+    public int Capasity { get => GetMaxEnergy(); set {  } }
 
     public int CurrentEnergy = 0;
     public int UsedEnergy = 0;
-    public int MaxEnergy => Acceptors.Select(a => a.Capasity).Sum();
 
-    public List<IHaveEnergy> Acceptors;
+    public abstract int GetMaxEnergy();
 }
 
 public interface IHaveEnergy
 {
     bool Energy { get; set; }
     int Capasity { get; set; }
+}
+public interface IHaveMaxEnergy
+{
+    abstract int GetMaxEnergy();
 }

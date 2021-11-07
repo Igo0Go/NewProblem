@@ -11,7 +11,7 @@ public class UI_CC_MainPanel : MonoBehaviour
     //public GameObject CabinMenedger;
 
 
-    public void SetActivePanel(GameObject selectActivePanel)
+    public void OnButton_Click(GameObject selectActivePanel)
     {
         this.gameObject.SetActive(false);
         selectActivePanel.SetActive(true);
