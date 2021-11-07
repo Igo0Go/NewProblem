@@ -25,7 +25,7 @@ public class InteractiveObject : MonoBehaviour
         }
     }
 
-    public string GetMessage(ToolController toolController)
+    public virtual string GetMessage(ToolController toolController)
     {
         if (toolForUse == ToolType.None || toolController.currentTool == toolForUse)
         {
