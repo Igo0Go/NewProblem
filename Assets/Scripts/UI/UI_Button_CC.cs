@@ -12,17 +12,18 @@ public class UI_Button_CC : MonoBehaviour
         for (int i = 0; i < qtyButtons; i++)
         {
             var but = Instantiate(buttonPrefs, this.transform).GetComponent<Button>();
+            but.onClick.AddListener(()=>OnButton_Click(but));
             buttons.Add(but);
         }
     }
 
 
-    public int OnButton_Click()
+    public int OnButton_Click(Button button)
     {
-
+        return buttons.IndexOf(button) + 1;
     }
 
-    [SerializeField] 
+    [SerializeField]
     private int qty;
     [ContextMenu("Init")]
     private void Init2()
