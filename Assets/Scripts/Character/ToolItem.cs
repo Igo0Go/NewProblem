@@ -24,6 +24,9 @@ public class ToolItem : MonoBehaviour
             case ToolTipe.FireExtinguisher:
                 result = "Огнетушитель";
                 break;
+            case ToolTipe.OxygenTank:
+                result = "Кислородный баллон";
+                break;
         }
         return result;
     }
@@ -34,5 +37,6 @@ public enum ToolTipe
     DuctTape = 0,
     Drone = 1,
     FireExtinguisher = 2,
-    None = 3
+    OxygenTank = 3,
+    None = 4
 }
