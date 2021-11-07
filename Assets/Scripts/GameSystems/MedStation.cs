@@ -22,14 +22,17 @@ public class MedStation : InterectiveEnergy
 
     protected override void Command(ToolController toolController = null)
     {
-        if(CurCountGel > 0)
+        if(Energy)
         {
-            CurCountGel--;
-            Instantiate(gelPrefab, spawnPoint.position, spawnPoint.rotation);
-        }
-        else
-        {
-            defaultMessageChanged?.Invoke();
+            if (CurCountGel > 0)
+            {
+                CurCountGel--;
+                Instantiate(gelPrefab, spawnPoint.position, spawnPoint.rotation);
+            }
+            else
+            {
+                defaultMessageChanged?.Invoke();
+            }
         }
     }
 }

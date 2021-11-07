@@ -9,4 +9,15 @@ public class InterectiveEnergy : InteractiveObject, IHaveEnergy
     public bool Energy { get => energy; set { energy = value; ReadyToUse = value; } }
     public int Capasity { get => capasity; set => capasity = value; }
 
+    public override string GetMessage(ToolController toolController)
+    {
+        if(Energy)
+        {
+            return base.GetMessage(toolController);
+        }
+        else
+        {
+            return "Нет энергии";
+        }
+    }
 }

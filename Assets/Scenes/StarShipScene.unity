@@ -5295,6 +5295,10 @@ PrefabInstance:
       value: InteractiveDoor-Bridge[]LiveModule
       objectReference: {fileID: 0}
     - target: {fileID: 6958575332156694216, guid: 3fee169876c41904784638c7ea2f3fd2, type: 3}
+      propertyPath: energy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958575332156694216, guid: 3fee169876c41904784638c7ea2f3fd2, type: 3}
       propertyPath: Rooms.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -8257,6 +8261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130d25702f162604cb92c65a5b3f3f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerSeconds: 5
   maxHealth: 100
   curHealth: 100
 --- !u!1 &916185793
@@ -11528,7 +11533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1181899626
 Transform:
   m_ObjectHideFlags: 0
@@ -11537,8 +11542,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181899625}
   m_LocalRotation: {x: -0.07830131, y: 0.70275813, z: 0.70275813, w: 0.078301296}
-  m_LocalPosition: {x: -5.619, y: 1.24, z: 2.547}
-  m_LocalScale: {x: 3.4083, y: 3.4083, z: 3.4083}
+  m_LocalPosition: {x: -5.619, y: 1.002, z: 2.547}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 238729397}
   m_RootOrder: 1
@@ -18792,6 +18797,10 @@ PrefabInstance:
     - target: {fileID: 76863379513495266, guid: 0c908f6339044904b9da2e184017840a, type: 3}
       propertyPath: m_Name
       value: MedStation
+      objectReference: {fileID: 0}
+    - target: {fileID: 76863379513495269, guid: 0c908f6339044904b9da2e184017840a, type: 3}
+      propertyPath: energy
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c908f6339044904b9da2e184017840a, type: 3}
