@@ -64,7 +64,7 @@ public class Room : MonoBehaviour, IHaveEnergy
                 oxygen = true;
             }
 
-            
+
             autoOxygen = value;
         }
     }

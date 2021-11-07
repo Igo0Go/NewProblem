@@ -14,10 +14,10 @@ public class UI_EngineManeger : MonoBehaviour
 
     private void Start()
     {
-        Power.Init(engineSystem.GetMaxEnergy());
+        Power.Init(engineSystem.GetMaxEnergy(),false);
         Power.IndexCurrEn = engineSystem.CurrentEnergy - 1;
         Power.Colored();
-
+        UpdateText();
     }
 
     public void UpdateText()

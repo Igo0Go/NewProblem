@@ -37,13 +37,17 @@ public class Door : TwoStateInteractiveObject, IHaveEnergy
                 energyRelay.UsedEnergy++;
             }
 
-            if (value)
+            if (!value)
                 Open = false;
-            
+
             energy = value;
         }
     }
 
+    public bool IsBreak
+    {
+        get; set;
+    }
     public int Capasity { get => capasity; set => capasity = value; }
 
     [Header("Не трогать")]

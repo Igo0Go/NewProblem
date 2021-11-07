@@ -9,6 +9,7 @@ using UnityEngine;
 public class HealthSystemScript : MonoBehaviour
 {
     public HealthSystem healSystem = HealthSystem.Instant;
+
 }
 
 [Serializable]
