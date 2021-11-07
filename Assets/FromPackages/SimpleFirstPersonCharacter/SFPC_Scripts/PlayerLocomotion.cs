@@ -2,19 +2,19 @@ using System.Collections;
 using UnityEngine;
 
 /// <summary>
-/// Скрипт перемещения
+/// РЎРєСЂРёРїС‚ РїРµСЂРµРјРµС‰РµРЅРёСЏ
 /// </summary>
 [RequireComponent(typeof(CharacterController))]
 [HelpURL("https://docs.google.com/document/d/1llgWK3zJK7km7DMyi_GHh63LZUJngJppIuZIfccWwtc/edit?usp=sharing")]
 public class PlayerLocomotion : MonoBehaviour
 {
-    [SerializeField, Range(1, 10), Tooltip("Скорость перемещения")] private float speed = 5f;
-    [SerializeField, Range(1, 50), Tooltip("Сила прыжка")] private float jumpForce = 15.0f;
+    [SerializeField, Range(1, 10), Tooltip("РЎРєРѕСЂРѕСЃС‚СЊ РїРµСЂРµРјРµС‰РµРЅРёСЏ")] private float speed = 5f;
+    [SerializeField, Range(1, 50), Tooltip("РЎРёР»Р° РїСЂС‹Р¶РєР°")] private float jumpForce = 15.0f;
     [SerializeField, Range(-40, -1)]
-    [Tooltip("Ограничение скорости падения. Это требуется, чтобы персонаж," +
-        "падающий с большой высоты не проникал сквозь текстуры.")]
+    [Tooltip("РћРіСЂР°РЅРёС‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё РїР°РґРµРЅРёСЏ. Р­С‚Рѕ С‚СЂРµР±СѓРµС‚СЃСЏ, С‡С‚РѕР±С‹ РїРµСЂСЃРѕРЅР°Р¶," +
+        "РїР°РґР°СЋС‰РёР№ СЃ Р±РѕР»СЊС€РѕР№ РІС‹СЃРѕС‚С‹ РЅРµ РїСЂРѕРЅРёРєР°Р» СЃРєРІРѕР·СЊ С‚РµРєСЃС‚СѓСЂС‹.")]
     private float terminalVelocity = -10.0f;
-    [SerializeField, Range(0.1f, 5), Tooltip("Сила притяжения. g=1 - земная гравитация")] private float gravity = 1f;
+    [SerializeField, Range(0.1f, 5), Tooltip("РЎРёР»Р° РїСЂРёС‚СЏР¶РµРЅРёСЏ. g=1 - Р·РµРјРЅР°СЏ РіСЂР°РІРёС‚Р°С†РёСЏ")] private float gravity = 1f;
 
     private CharacterController charController;
     private Vector3 moveVector;
@@ -25,7 +25,7 @@ public class PlayerLocomotion : MonoBehaviour
     private float minFall = -1.5f;
 
     /// <summary>
-    /// Этот коэффициент используется, чтобы добиться ощущения "правильной" гравитации при gravity = 1.
+    /// Р­С‚РѕС‚ РєРѕСЌС„С„РёС†РёРµРЅС‚ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ, С‡С‚РѕР±С‹ РґРѕР±РёС‚СЊСЃСЏ РѕС‰СѓС‰РµРЅРёСЏ "РїСЂР°РІРёР»СЊРЅРѕР№" РіСЂР°РІРёС‚Р°С†РёРё РїСЂРё gravity = 1.
     /// </summary>
     private const float gravMultiplayer = 9.8f * 5f;
 
@@ -49,10 +49,10 @@ public class PlayerLocomotion : MonoBehaviour
         }
     }
 
-    #region Блокировка и телепортация
+    #region Р‘Р»РѕРєРёСЂРѕРІРєР° Рё С‚РµР»РµРїРѕСЂС‚Р°С†РёСЏ
 
     /// <summary>
-    /// Запретить игроку перемещаться
+    /// Р—Р°РїСЂРµС‚РёС‚СЊ РёРіСЂРѕРєСѓ РїРµСЂРµРјРµС‰Р°С‚СЊСЃСЏ
     /// </summary>
     public void SetLocomotionOpportunity(bool value)
     {
@@ -60,9 +60,9 @@ public class PlayerLocomotion : MonoBehaviour
     }
 
     /// <summary>
-    /// Плавно переместить игрока в точку (предварительно нужно заблокировать)
+    /// РџР»Р°РІРЅРѕ РїРµСЂРµРјРµСЃС‚РёС‚СЊ РёРіСЂРѕРєР° РІ С‚РѕС‡РєСѓ (РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕ РЅСѓР¶РЅРѕ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°С‚СЊ)
     /// </summary>
-    /// <param name="point">Точка, куда нужно переместить и по которой нужно повернуть персонажа</param>
+    /// <param name="point">РўРѕС‡РєР°, РєСѓРґР° РЅСѓР¶РЅРѕ РїРµСЂРµРјРµСЃС‚РёС‚СЊ Рё РїРѕ РєРѕС‚РѕСЂРѕР№ РЅСѓР¶РЅРѕ РїРѕРІРµСЂРЅСѓС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р°</param>
     public void SmoothMoveToPoint(Transform point)
     {
         StartCoroutine(SmoothMoveToPointCoroutine(point));
@@ -70,18 +70,18 @@ public class PlayerLocomotion : MonoBehaviour
 
 
     /// <summary>
-    /// Задаёт значение enabled для characterController (требуется для телепортации)
+    /// Р—Р°РґР°С‘С‚ Р·РЅР°С‡РµРЅРёРµ enabled РґР»СЏ characterController (С‚СЂРµР±СѓРµС‚СЃСЏ РґР»СЏ С‚РµР»РµРїРѕСЂС‚Р°С†РёРё)
     /// </summary>
-    /// <param name="value">целевое состояние</param>
+    /// <param name="value">С†РµР»РµРІРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ</param>
     public void SetBlockValueToPlayer(bool value)
     {
         charController.enabled = !value;
     }
 
     /// <summary>
-    /// Телепортировать игрока в точку (предварительно нужно заблокировать)
+    /// РўРµР»РµРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ РёРіСЂРѕРєР° РІ С‚РѕС‡РєСѓ (РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕ РЅСѓР¶РЅРѕ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°С‚СЊ)
     /// </summary>
-    /// <param name="point">Целевое положение</param>
+    /// <param name="point">Р¦РµР»РµРІРѕРµ РїРѕР»РѕР¶РµРЅРёРµ</param>
     public void TeleportToPoint(Transform point)
     {
         myTransform.position = point.position;
@@ -89,7 +89,7 @@ public class PlayerLocomotion : MonoBehaviour
     }
 
     /// <summary>
-    /// Быстрая телепортация (без необходимости блокировтаь)
+    /// Р‘С‹СЃС‚СЂР°СЏ С‚РµР»РµРїРѕСЂС‚Р°С†РёСЏ (Р±РµР· РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё Р±Р»РѕРєРёСЂРѕРІС‚Р°СЊ)
     /// </summary>
     /// <param name="point"></param>
     public void FastTeleportToPoint(Transform point)
