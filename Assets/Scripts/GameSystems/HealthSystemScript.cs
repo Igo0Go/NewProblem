@@ -34,22 +34,23 @@ public class HealthSystem : EnergyRelay
     #endregion
 
     public new List<Room> Acceptors = new List<Room>();
-    public int CurrentStateValue
+    public float CurrentStateValue
     {
         get
         {
-            return currentStateValue;
+            return currentGasValue;
         }
         set
         {
-            if (currentStateValue <= maxGas)
+            if (currentGasValue <= 0)
                 NeedGas?.Invoke();
 
-            currentStateValue = value;
+            currentGasValue = value;
         }
     }
-    [SerializeField] private int currentStateValue = 100;
-    public int maxGas = 100;
+    [SerializeField] private float currentGasValue = 100;
+    public float maxGas = 100;
+
     public event Action NeedGas;
 }
 

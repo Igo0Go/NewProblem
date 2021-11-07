@@ -3,36 +3,40 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class ToolItem : MonoBehaviour
 {
-    public ToolTipe type;
+    public ToolType type;
 
     public string GetMessage()
     {
         return "E - " + "подобрать " + GetToolName(type);
     }
 
-    public static string GetToolName(ToolTipe type)
+    public static string GetToolName(ToolType type)
     {
         string result = string.Empty;
         switch (type)
         {
-            case ToolTipe.DuctTape:
+            case ToolType.DuctTape:
                 result = "Изолента";
                 break;
-            case ToolTipe.Drone:
+            case ToolType.Drone:
                 result = "Ремонтный дрон";
                 break;
-            case ToolTipe.FireExtinguisher:
+            case ToolType.FireExtinguisher:
                 result = "Огнетушитель";
+                break;
+            case ToolType.OxygenTank:
+                result = "Кислородный баллон";
                 break;
         }
         return result;
     }
 }
 
-public enum ToolTipe
+public enum ToolType
 {
     DuctTape = 0,
     Drone = 1,
     FireExtinguisher = 2,
-    None = 3
+    OxygenTank = 3,
+    None = 4
 }

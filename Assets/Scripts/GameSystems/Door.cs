@@ -60,23 +60,11 @@ public class Door : TwoStateInteractiveObject, IHaveEnergy
             return Rooms[0];
     }
 
-    protected override void Command()
+    protected override void Command(ToolController toolController = null)
     {
         base.Command();
 
         if (Energy)
             Open = !Open;
-    }
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

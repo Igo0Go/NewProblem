@@ -35,7 +35,7 @@ public class TransformModule : LogicModule
     private bool activate = false;
     private float time = 0f;
     private float position = 0f;
-    private float direction = 1f;
+    private float direction = -1f;
 
     private void Awake()
     {
@@ -53,6 +53,7 @@ public class TransformModule : LogicModule
         if (loopType == LoopType.Once)
         {
             activate = true;
+            direction *= -1;
         }
         else
         {
@@ -73,7 +74,7 @@ public class TransformModule : LogicModule
     {
         if (activate)
         {
-            time = time + (direction * Time.deltaTime / duration);
+            time += (direction * Time.deltaTime / duration);
             switch (loopType)
             {
                 case LoopType.Once:
@@ -89,6 +90,7 @@ public class TransformModule : LogicModule
             PerformTransform(position);
         }
     }
+
 
     private void PerformTransform(float position)
     {
@@ -114,7 +116,6 @@ public class TransformModule : LogicModule
         {
             time = position;
             activate = false;
-            direction *= -1;
         }
     }
 

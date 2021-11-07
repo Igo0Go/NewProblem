@@ -37,14 +37,18 @@ public class InteractionController : MonoBehaviour
             {
                 buferCollider = hit.collider;
 
-                if(buferCollider.TryGetComponent<InteractiveObject>(out buferInteractiveObject))
+                if(buferCollider.CompareTag("InteractiveObject") && buferCollider.TryGetComponent<InteractiveObject>(out buferInteractiveObject))
                 {
                     buferInteractiveObject.defaultMessageChanged += OnDefaultMessageChanged;
                     OnDefaultMessageChanged();
                 }
-                else if(buferCollider.TryGetComponent<ToolItem>(out buferToolItem))
+                else if(buferCollider.CompareTag("ToolItem") && buferCollider.TryGetComponent<ToolItem>(out buferToolItem))
                 {
                     changeMessageEvent?.Invoke(buferToolItem.GetMessage());
+                }
+                else
+                {
+                    ClearBifers();
                 }
             }
         }

@@ -16,7 +16,7 @@ public class TwoStateInteractiveObject : InteractiveObject
         firstStateMessage = defaultMessage;
     }
 
-    protected override void Command()
+    protected override void Command(ToolController toolController = null)
     {
         firstState = !firstState;
         defaultMessage = firstState ? firstStateMessage : secondStateMessage;
