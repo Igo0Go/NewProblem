@@ -171,6 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2172369230450466598}
+  - component: {fileID: 4793440934589824446}
   m_Layer: 0
   m_Name: DoorBase
   m_TagString: Untagged
@@ -194,3 +195,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4793440934589824446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7412919468090656851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd0a77a6ace11b4486693dc3d9ddc30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolForUse: 0
+  defaultMessage: 
+  ReadyToUse: 0
+  modules: []
+  secondStateMessage: 
+  Rooms: []
+  open: 0
+  energy: 1
+  capasity: 1
