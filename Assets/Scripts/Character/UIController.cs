@@ -7,6 +7,9 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] private Text messageText;
     [SerializeField] private Slider healthSlider;
+    [SerializeField] private GameObject suitGroup;
+    [SerializeField] private Slider suitEnergySlider;
+    [SerializeField] private Image lightIndicator;
 
     private float targetHealthValue;
 
@@ -14,8 +17,12 @@ public class UIController : MonoBehaviour
     {
         InteractionController interactionController = FindObjectOfType<InteractionController>();
         HealthPlayer.Damaged += OnGetDamage;
-        HealthPlayer.Healed += OnGetDamage;
+        HealthPlayer.Healed += OnGetHeal;
         HealthPlayer.Dead += OnDead;
+
+        HealthPlayer.ChangeSuitState += OnChangeSuitState;
+        HealthPlayer.ChangeLightState += OnChangeLightState;
+        HealthPlayer.ChangeSuitEnergy += OnChangeSuitEnergyValue;
 
         interactionController.changeMessageEvent += ChangeMessage;
 
@@ -32,10 +39,24 @@ public class UIController : MonoBehaviour
         MoveSlider(value);
     }
 
-    private void OnGetHeal(int value)
+    private void OnGetHeal(float value)
     {
         MoveSlider(value);
     }
+
+    private void OnChangeSuitState(bool state)
+    {
+        suitGroup.SetActive(state);
+    }
+    private void OnChangeLightState(bool light)
+    {
+        lightIndicator.enabled = light;
+    }
+    private void OnChangeSuitEnergyValue(float value)
+    {
+        suitEnergySlider.value = value;
+    }
+
 
     private void OnDead()
     {

@@ -6,10 +6,16 @@ using UnityEngine.Events;
 
 public class HealthPlayer : MonoBehaviour
 {
-    [SerializeField] private int damagePerSeconds = 5;
     [SerializeField] private float maxHealth = 100;
-
     [SerializeField] private float curHealth = 100;
+    public float suitCurrentEnergy = 100;
+    [SerializeField] private int damagePerSeconds = 5;
+    [SerializeField] private float energyPerMinutes = 5;
+    [SerializeField] private float lightEnergyPerMinutes = 5;
+    [SerializeField] private GameObject lightObject;
+
+    private bool useSuit;
+    private bool useLight;
 
     public float CurHealth
     {
@@ -31,13 +37,38 @@ public class HealthPlayer : MonoBehaviour
 
     public static event Action<float> Damaged;
     public static event Action<float> Healed;
+    public static event Action<bool> ChangeSuitState;
+    public static event Action<bool> ChangeLightState;
+    public static event Action<float> ChangeSuitEnergy;
+
     public static event Action Dead;
 
     private Collider bufer;
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.L) && useSuit)
+        {
+            if(useLight)
+            {
+                LightOff();
+            }
+            else
+            {
+                LightOn();
+            }
+        }
+    }
 
     public void GetDamage(float damage)
     {
+        if(useSuit && suitCurrentEnergy > 0)
+        {
+            suitCurrentEnergy -= damage;
+            ChangeSuitEnergy?.Invoke(suitCurrentEnergy);
+            return;
+        }
+
         CurHealth -= damage;
         Damaged?.Invoke(CurHealth);
     }
@@ -53,6 +84,39 @@ public class HealthPlayer : MonoBehaviour
         Dead?.Invoke();
     }
 
+    public void PutOnSuit(float energy)
+    {
+        suitCurrentEnergy = energy;
+        useSuit = true;
+        ChangeSuitState?.Invoke(useSuit);
+        StartCoroutine(SpendEnergy());
+    }
+
+    public void TakeOffSuit()
+    {
+        LightOff();
+        useSuit = false;
+        ChangeSuitState?.Invoke(useSuit);
+        StopCoroutine(SpendEnergy());
+    }
+
+    private void LightOn()
+    {
+        if(suitCurrentEnergy > 0)
+        {
+            useLight = true;
+            lightObject.SetActive(useLight);
+            ChangeLightState(useLight);
+        }
+    }
+    private void LightOff()
+    {
+        useLight = false;
+        lightObject.SetActive(useLight);
+        ChangeLightState(useLight);
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("DamageZone"))
@@ -66,16 +130,16 @@ public class HealthPlayer : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider other)
-{
-    if (other.CompareTag("DamageZone"))
     {
-        if (other == bufer)
+        if (other.CompareTag("DamageZone"))
         {
-            StopCoroutine(DamagePerUnit());
-            bufer = null;
+            if (other == bufer)
+            {
+                StopCoroutine(DamagePerUnit());
+                bufer = null;
+            }
         }
     }
-}
 
     private IEnumerator DamagePerUnit()
     {
@@ -86,4 +150,22 @@ public class HealthPlayer : MonoBehaviour
         }
     }
 
+    private IEnumerator SpendEnergy()
+    {
+        while(suitCurrentEnergy > 0)
+        {
+            suitCurrentEnergy -= (energyPerMinutes / 60 * Time.deltaTime);
+
+            if(useLight)
+            {
+                suitCurrentEnergy -= (lightEnergyPerMinutes / 60 * Time.deltaTime);
+            }
+
+            ChangeSuitEnergy?.Invoke(suitCurrentEnergy);
+
+            yield return null;
+        }
+
+        LightOff();
+    }
 }
