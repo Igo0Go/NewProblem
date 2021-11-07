@@ -60,7 +60,7 @@ public class Door : TwoStateInteractiveObject, IHaveEnergy
             return Rooms[0];
     }
 
-    protected override void Command()
+    protected override void Command(ToolController toolController = null)
     {
         base.Command();
 

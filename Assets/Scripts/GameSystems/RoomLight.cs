@@ -55,7 +55,7 @@ public class RoomLight : TwoStateInteractiveObject, IHaveEnergy
 
     private EnergyRelay energyRelay = LightSystem.Instant;
 
-    protected override void Command()
+    protected override void Command(ToolController toolController = null)
     {
         base.Command();
 

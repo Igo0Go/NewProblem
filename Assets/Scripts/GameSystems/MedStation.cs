@@ -8,7 +8,7 @@ public class MedStation : InterectiveEnergy
     public int MaxCountGel = 10;
     public int CurCountGel = 10;
 
-    protected override void Command()
+    protected override void Command(ToolController toolController = null)
     {
         base.Command();
         CurCountGel--;

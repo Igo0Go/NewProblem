@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class ToolController : MonoBehaviour
 {
-    public ToolTipe currentTool;
+    public ToolType currentTool;
 
-    [SerializeField] private List<GameObject> itemPrefabs;
-    [SerializeField] private List<GameObject> toolObjects;
+    [SerializeField] private List<GameObject> itemPrefabs = new List<GameObject>();
+    [SerializeField] private List<GameObject> toolObjects = new List<GameObject>();
 
-    private float oxygenValueInCurrentTank;
+    public float oxygenValueInCurrentTank;
 
     public void DropCurrentTool()
     {
-        if(currentTool != ToolTipe.None)
+        if (currentTool != ToolType.None)
         {
             toolObjects.ForEach(g => g.SetActive(false));
             GameObject currentItemPrefab = Instantiate(itemPrefabs[(int)currentTool], transform.position + transform.up + transform.forward, Quaternion.identity);
-            if (currentTool == ToolTipe.OxygenTank)
+            if (currentTool == ToolType.OxygenTank)
             {
                 currentItemPrefab.GetComponent<OxygenTank>().OxygenValue = oxygenValueInCurrentTank;
                 oxygenValueInCurrentTank = 0;
             }
-            currentTool = ToolTipe.None;
+            currentTool = ToolType.None;
         }
     }
 
@@ -31,7 +31,7 @@ public class ToolController : MonoBehaviour
         DropCurrentTool();
         currentTool = tool.type;
 
-        if(currentTool == ToolTipe.OxygenTank)
+        if (currentTool == ToolType.OxygenTank)
         {
             oxygenValueInCurrentTank = tool.gameObject.GetComponent<OxygenTank>().OxygenValue;
         }
@@ -40,9 +40,17 @@ public class ToolController : MonoBehaviour
         Destroy(tool.gameObject);
     }
 
+    public void ChangeTool(ToolType tool)
+    {
+        DropCurrentTool();
+        currentTool = tool;
+
+        toolObjects[(int)currentTool].SetActive(true);
+    }
+
     public void SpendTool()
     {
         toolObjects.ForEach(g => g.SetActive(false));
-        currentTool = ToolTipe.None;
+        currentTool = ToolType.None;
     }
 }
