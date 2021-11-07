@@ -37,9 +37,15 @@ public class Door : TwoStateInteractiveObject, IHaveEnergy
                 energyRelay.UsedEnergy++;
             }
 
-            if (value)
+            if (!value)
+            {
+                if(Open)
+                {
+                    ActivateModulesWithChangeState();
+                }
                 Open = false;
-            
+            }
+
             energy = value;
         }
     }
@@ -60,11 +66,24 @@ public class Door : TwoStateInteractiveObject, IHaveEnergy
             return Rooms[0];
     }
 
+    public override string GetMessage(ToolController toolController)
+    {
+        if (Energy)
+        {
+            return base.GetMessage(toolController);
+        }
+        else
+        {
+            return "Нет энергии";
+        }
+    }
+
     protected override void Command(ToolController toolController = null)
     {
-        base.Command();
-
         if (Energy)
+        {
             Open = !Open;
+            base.Command();
+        }
     }
 }

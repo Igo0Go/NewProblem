@@ -169,19 +169,19 @@ public class PlayerLocomotion : MonoBehaviour
         transform.rotation = point.rotation;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("TransformFixator"))
-        {
-            transformFixator = other;
-            myTransform.parent = other.transform;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if(other == transformFixator)
-        {
-            myTransform.parent = null;
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(other.CompareTag("TransformFixator"))
+    //    {
+    //        transformFixator = other;
+    //        myTransform.parent = other.transform;
+    //    }
+    //}
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if(other == transformFixator)
+    //    {
+    //        myTransform.parent = null;
+    //    }
+    //}
 }
