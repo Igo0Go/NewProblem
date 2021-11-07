@@ -67,16 +67,4 @@ public class Door : TwoStateInteractiveObject, IHaveEnergy
         if (Energy)
             Open = !Open;
     }
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
