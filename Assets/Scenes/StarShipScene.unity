@@ -1414,6 +1414,62 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126585833}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &127533128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127533129}
+  - component: {fileID: 127533130}
+  m_Layer: 0
+  m_Name: Random_MedicamentsPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &127533129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127533128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &127533130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127533128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: e5386782dfa8c1b41a76b7528a56d6e9, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u0417\u0430\u043F\u0430\u0441
+      \u043C\u0435\u0434\u0438\u043A\u0430\u043C\u0435\u043D\u0442\u043E\u0432 \u043A\u043E\u043D\u0447\u0438\u0442\u044C\u0441\u044F!
+      \u0421\u043E\u0432\u0441\u0435\u043C! \u042F \u0434\u0443\u043C\u0430\u0442\u044C,
+      \u044D\u0442\u043E \u043A\u043E\u0442!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &135521912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1516,6 +1572,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6958575332156694218, guid: 3fee169876c41904784638c7ea2f3fd2, type: 3}
   m_PrefabInstance: {fileID: 135521912}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &152552822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152552823}
+  - component: {fileID: 152552824}
+  m_Layer: 0
+  m_Name: Scenario_endgamePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &152552823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152552822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &152552824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152552822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: fcdba66bde85a254e8256d69409933bd, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u041C\u044B \u0434\u043E\u0431\u0440\u0430\u0442\u044C\u0441\u044F
+      \u0434\u043E \u043F\u0440\u0438\u0447\u0430\u043B! \u0410 \u0435\u0449\u0451
+      \u044F \u0441\u043C\u043E\u0447\u044C \u043F\u043E\u0447\u0438\u043D\u0438\u0442\u044C
+      \u043A\u0430\u043C\u0435\u0440\u0430. \u0418 \u044F \u043C\u043E\u0447\u044C
+      \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C \u0432\u0430\u043C
+      \u043F\u0440\u0438\u0447\u0438\u043D\u044B \u043F\u043E\u043B\u043E\u043C\u043A\u0430.
+      \u0412\u0441\u0435\u0445 \u043F\u043E\u043B\u043E\u043C\u043A\u0430."
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: b786e6c48a497e94e8b1ddef5fa3cf38, type: 2}
+    clip: {fileID: 8300000, guid: a0b6d81515b8fa94989bbbdf3b9efe4f, type: 3}
+    replicText: "\u0422\u0430\u043A \u044D\u0442\u043E \u0442\u044B, \u043F\u0443\u0448\u0438\u0441\u0442\u044B\u0439
+      \u0432\u0440\u0435\u0434\u0438\u0442\u0435\u043B\u044C! \u0421\u044E\u0434\u0430
+      \u0438\u0434\u0438"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: 47e9242c9d8098d4bbce6964ef5e8dcd, type: 2}
+    clip: {fileID: 8300000, guid: 7a1682971162015409137aa4bbf108b8, type: 3}
+    replicText: "\u041D\u0435\u0434\u043E\u0432\u043E\u043B\u044C\u043D\u044B\u0439
+      \u043C\u044F\u0443\u043A"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &153591478
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2820,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d5612010bbe0354ab62f2fe627f4703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &221288931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 221288932}
+  - component: {fileID: 221288933}
+  m_Layer: 0
+  m_Name: Scenario_Tape_FindedPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &221288932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221288931}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &221288933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221288931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: 653ea3b71d2d35046aa379e4421e9ffc, type: 3}
+    replicText: "\u041E\u0442\u043B\u0438\u0447\u043D\u043E! \u0422\u0435\u043F\u0435\u0440\u044C
+      \u0432\u044B \u0441\u043C\u043E\u0447\u044C \u043F\u043E\u0447\u0438\u043D\u0438\u0442\u044C
+      \u043F\u0440\u043E\u0432\u043E\u0434\u0430!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: b786e6c48a497e94e8b1ddef5fa3cf38, type: 2}
+    clip: {fileID: 8300000, guid: 31d7470aca0f6ec4c92a7752a89bd098, type: 3}
+    replicText: "\u0414\u0430 \u043D\u0435\u0443\u0436\u0435\u043B\u0438?! \u041A\u0430\u043A\u0430\u044F
+      \u0440\u0430\u0434\u043E\u0441\u0442\u044C!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &225672248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6078940420239584931, guid: 991cb54e8d009f343babd1f7f4f4eb90, type: 3}
@@ -3184,6 +3376,79 @@ Transform:
   m_Father: {fileID: 365912713}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &276832624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 276832625}
+  - component: {fileID: 276832626}
+  m_Layer: 0
+  m_Name: LiveHouse_First_DoorPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &276832625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276832624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276832626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276832624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: eb771795e8108894fabf17f6b9d5cda4, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D. \u0414\u0432\u0435\u0440\u044C
+      \u0432 \u0436\u0438\u043B\u043E\u0439 \u043E\u0442\u0441\u0435\u043A \u043A\u043B\u0438\u043D\u0438\u0442\u044C!
+      \u041E\u043D\u0430 \u0445\u043E\u0434\u0438\u0442\u044C \u0442\u0443\u0434\u0430
+      \u0441\u044E\u0434\u0430! \u042D\u0442\u043E \u043C\u043E\u0436\u0435\u0442
+      \u0431\u044B\u0442\u044C \u043E\u043F\u0430\u0441\u043D\u043E \u0434\u043B\u044F
+      \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F.
+      \u041D\u043E \u044F \u043D\u0430\u0434\u0435\u044F\u0442\u044C\u0441\u044F,
+      \u0447\u0442\u043E \u043A\u043E\u0442 \u0431\u044B\u0442\u044C \u0432 \u0434\u0432\u0435\u0440\u043D\u043E\u0439
+      \u043F\u0440\u043E\u0451\u043C \u0432 \u0442\u043E \u0432\u0440\u0435\u043C\u044F,
+      \u043A\u043E\u0433\u0434\u0430 \u044D\u0442\u043E \u043D\u0430\u0447\u0438\u043D\u0430\u0442\u044C\u0441\u044F!
+      \u041F\u043E\u0441\u043B\u0435 \u044D\u0442\u043E\u0433\u043E \u043E\u043D
+      \u0443\u0436\u0435 \u043D\u0435 \u0431\u0443\u0434\u0435\u0442 \u0438\u043C\u0435\u0442\u044C
+      \u0446\u0435\u043D\u043D\u043E\u0441\u0442\u044C \u0438 \u043C\u044B \u043C\u043E\u0447\u044C
+      \u0432\u044B\u043A\u0438\u043D\u0443\u0442\u044C \u0435\u0433\u043E."
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: b786e6c48a497e94e8b1ddef5fa3cf38, type: 2}
+    clip: {fileID: 8300000, guid: 32704853b6f5520448ff4c6c196bbce1, type: 3}
+    replicText: "\u041C\u044B \u043D\u0435 \u0431\u0443\u0434\u0435\u043C \u0432\u044B\u043A\u0438\u0434\u044B\u0432\u0430\u0442\u044C
+      \u043A\u043E\u0442\u0430!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &277711845
 GameObject:
   m_ObjectHideFlags: 0
@@ -4440,6 +4705,124 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401558353}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &403792426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403792427}
+  - component: {fileID: 403792428}
+  m_Layer: 0
+  m_Name: Scenario_Reactor_OverheatedPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &403792427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403792426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &403792428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403792426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: e4868f5dd8722d947ab5c4b229b2af34, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u041F\u043E\u0445\u043E\u0436\u0435,
+      \u043D\u0430\u0448 \u0440\u0435\u0430\u043A\u0442\u043E\u0440 \u043F\u0435\u0440\u0435\u0433\u0440\u0435\u0432\u0430\u0442\u044C\u0441\u044F!
+      \u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C
+      \u043A\u043E\u043D\u0441\u043E\u043B\u044C. \u041C\u043E\u0436\u0435\u0442,
+      \u0441\u0442\u043E\u0438\u0442 \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u044F\u0442\u044C
+      \u044D\u043D\u0435\u0440\u0433\u0438\u044F? \u0410 \u043C\u043E\u0436\u0435\u0442,
+      \u043C\u044B \u0432\u0435\u0437\u0442\u0438 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+      \u043C\u043D\u043E\u0433\u043E \u0433\u0440\u0443\u0437\u0430! \u0412\u0430\u043C
+      \u0441\u0442\u043E\u0438\u0442 \u0432\u044B\u043A\u0438\u0434\u044B\u0432\u0430\u0442\u044C
+      \u043A\u043E\u0442\u0430!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: b786e6c48a497e94e8b1ddef5fa3cf38, type: 2}
+    clip: {fileID: 8300000, guid: a0136e7013b03b5488c952ae103ee140, type: 3}
+    replicText: "\u041C\u044B \u043D\u0435 \u0431\u0443\u0434\u0435\u043C \u0432\u044B\u043A\u0438\u0434\u044B\u0432\u0430\u0442\u044C
+      \u043A\u043E\u0442\u0430..."
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: a387295972b279d48b12519643620c32, type: 3}
+    replicText: "\u041D\u043E \u0441 \u0442\u043E\u0447\u043A\u0438 \u0437\u0440\u0435\u043D\u0438\u044F
+      \u043F\u043E\u043B\u0435\u0437\u043D\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B
+      \u044D\u0442\u043E\u0442 \u0436\u0438\u0432\u043E\u0442\u043D\u043E\u0435 \u044F\u0432\u043B\u044F\u0442\u044C\u0441\u044F
+      \u043B\u0438\u0448\u044C \u043E\u0431\u0443\u0437\u043E\u0439. \u041E\u043D
+      \u043D\u0435 \u043D\u0435\u0441\u0442\u0438 \u043D\u0438\u043A\u0430\u043A\u043E\u0439
+      \u043F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u043F\u043E\u043B\u044C\u0437\u0430!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: b786e6c48a497e94e8b1ddef5fa3cf38, type: 2}
+    clip: {fileID: 8300000, guid: c3dddc535f7bcd445a77771a29518eb1, type: 3}
+    replicText: "\u0421 \u043D\u0438\u043C \u043C\u043D\u0435 \u043D\u0435 \u0442\u0430\u043A
+      \u043E\u0434\u0438\u043D\u043E\u043A\u043E..."
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: 026403017ccd96d4294cfa6ced9693e5, type: 3}
+    replicText: "\u041D\u043E \u0432\u044B \u0432\u0435\u0434\u044C \u0438\u043C\u0435\u0442\u044C
+      \u043C\u0435\u043D\u044F! \u042F \u0431\u044B\u0442\u044C \u0441\u043E\u0437\u0434\u0430\u043D
+      \u0438 \u0434\u043B\u044F \u043F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u043E\u0439
+      \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0430 \u0442\u043E\u0436\u0435!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: b786e6c48a497e94e8b1ddef5fa3cf38, type: 2}
+    clip: {fileID: 8300000, guid: dfc1c220062e6fb40884253c14b286b9, type: 3}
+    replicText: "\u0414\u0430, \u043D\u043E \u043A\u043E\u0433\u0434\u0430 \u0443
+      \u0442\u0435\u0431\u044F \u0441\u0431\u0438\u043B\u0441\u044F \u044F\u0437\u044B\u043A\u043E\u0432\u043E\u0439
+      \u043F\u0430\u043A\u0435\u0442, \u0442\u044B \u0441\u0442\u0430\u043B \u043D\u0435\u0432\u044B\u043D\u043E\u0441\u0438\u043C.
+      \u0417\u0430\u043A\u0440\u044B\u043B\u0438 \u0442\u0435\u043C\u0443. \u041C\u044B
+      \u043D\u0435 \u0431\u0443\u0434\u0435\u043C \u0432\u044B\u043A\u0438\u0434\u044B\u0432\u0430\u0442\u044C
+      \u043A\u043E\u0442\u0430. \u041A\u043E\u0440\u0430\u0431\u043B\u044C \u043F\u0440\u043E\u0441\u0442\u043E
+      \u0441\u0442\u0430\u0440\u044B\u0439 \u0438 \u0432\u0435\u0441 \u0442\u0443\u0442
+      \u043D\u0435 \u043F\u0440\u0438 \u0447\u0451\u043C. \u0413\u043B\u0430\u0432\u043D\u043E\u0435
+      - \u0434\u043E\u0442\u044F\u043D\u0443\u0442\u044C \u0434\u043E \u0437\u0430\u043A\u0430\u0437\u0447\u0438\u043A\u0430."
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: acec217f72b2b3a4cb2bfdee797fe7f5, type: 3}
+    replicText: "\u0420\u0430\u0441\u0441\u0447\u0451\u0442\u043D\u044B\u0439 \u0432\u0440\u0435\u043C\u044F
+      \u043F\u0440\u0438\u0431\u044B\u0442\u0438\u044F \u043A \u043C\u0435\u0441\u0442\u0443
+      \u043E\u0442\u0433\u0440\u0443\u0437\u043A\u0438 - 10 \u043C\u0438\u043D\u0443\u0442"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &405223244
 GameObject:
   m_ObjectHideFlags: 0
@@ -4521,6 +4904,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405223244}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &409121259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 409121260}
+  - component: {fileID: 409121261}
+  m_Layer: 0
+  m_Name: Control_Center_Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &409121260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409121259}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &409121261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409121259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: faf32c97477acf8409259e730f67fedc, type: 3}
+    replicText: "\u0421\u043A\u043E\u0440\u0435\u0435, \u043A\u0430\u043F\u0438\u0442\u0430\u043D.
+      \u042D\u0442\u043E \u043C\u043E\u0436\u0435\u0442 \u043E\u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F
+      \u043E\u0447\u0435\u043D\u044C \u0441\u0435\u0440\u044C\u0451\u0437\u043D\u044B\u0439
+      \u043F\u043E\u043B\u043E\u043C\u043A\u0430!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: b786e6c48a497e94e8b1ddef5fa3cf38, type: 2}
+    clip: {fileID: 8300000, guid: 3289931f4cd7df64fa57d0ead2389103, type: 3}
+    replicText: "\u0414\u0430, \u0441\u0435\u0439\u0447\u0430\u0441"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &422525296
 GameObject:
   m_ObjectHideFlags: 0
@@ -4704,6 +5149,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6958575332156694218, guid: 3fee169876c41904784638c7ea2f3fd2, type: 3}
   m_PrefabInstance: {fileID: 425567520}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &448669760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 448669761}
+  - component: {fileID: 448669762}
+  m_Layer: 0
+  m_Name: Scenario_Wires_Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &448669761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448669760}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &448669762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448669760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: e90da9e060875f14286fdf959084ed89, type: 3}
+    replicText: "\u041D\u043E \u0432\u044B \u043D\u0435 \u0441\u043C\u043E\u0447\u044C
+      \u0447\u0438\u043D\u0438\u0442\u044C \u044D\u0442\u043E\u0442 \u043F\u043E\u043B\u043E\u043C\u043A\u0430
+      \u0431\u0435\u0437 \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u0430!
+      \u0422\u043E\u0442 \u043F\u0438\u043D\u0433\u0432\u0438\u043D \u0432 \u0432\u0430\u0448\u0435\u0439
+      \u043A\u0430\u044E\u0442\u0435 \u0435\u0449\u0451 \u0432\u044B\u0434\u0430\u0432\u0430\u0442\u044C
+      \u0438\u0437\u043E\u043B\u0435\u043D\u0442\u0430? \u042D\u0442\u043E \u043C\u043E\u0436\u0435\u0442
+      \u0431\u044B\u0442\u044C \u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &450020013
 GameObject:
   m_ObjectHideFlags: 0
@@ -6131,6 +6635,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657158517}
   m_Mesh: {fileID: 5691666353457927829, guid: cdb5f65fb01cbb145959a286f754fe9d, type: 3}
+--- !u!1 &671782806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671782807}
+  - component: {fileID: 671782808}
+  m_Layer: 0
+  m_Name: LiveHouse_First_FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &671782807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671782806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &671782808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671782806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: 0f59793a797cf364d8dfb91d0dc6e63d, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u0412\u043E\u0437\u0433\u0430\u0440\u0430\u043D\u0438\u0435
+      \u0432 \u0436\u0438\u043B\u043E\u0439 \u043E\u0442\u0441\u0435\u043A! \u0412\u044B
+      \u043C\u043E\u0447\u044C \u0432\u044B\u043A\u0430\u0447\u0438\u0432\u0430\u0442\u044C
+      \u0432\u043E\u0437\u0434\u0443\u0445 \u043E\u0442\u0442\u0443\u0434\u0430..."
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: b786e6c48a497e94e8b1ddef5fa3cf38, type: 2}
+    clip: {fileID: 8300000, guid: afac356e07628c24c8a7d3e23a6dd317, type: 3}
+    replicText: "\u041C\u044B \u043D\u0435 \u0431\u0443\u0434\u0435\u043C \u0432\u044B\u043A\u0438\u0434\u044B\u0432\u0430\u0442\u044C
+      \u043A\u043E\u0442\u0430!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: 73e906487e14d2f4a98d02ed2b012a93, type: 3}
+    replicText: "\u0422\u043E\u0433\u0434\u0430 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F
+      \u043E\u0433\u043D\u0435\u0442\u0443\u0448\u0438\u0442\u0435\u043B\u044C! \u041D\u043E
+      \u044F \u0432\u0441\u0451 \u0440\u0430\u0432\u043D\u043E \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u043E\u0432\u0430\u0442\u044C
+      \u0432\u0430\u043C \u0432\u044B\u043A\u0438\u0434\u044B\u0432\u0430\u0442\u044C
+      \u043A\u043E\u0442\u0430!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &682017967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8832,6 +9409,60 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 290548356748366425, guid: 65f6b2bb20a56564796021ca4909adf2, type: 3}
+--- !u!1 &981509508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981509509}
+  - component: {fileID: 981509510}
+  m_Layer: 0
+  m_Name: Random_EnginePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981509509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981509508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &981509510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981509508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: 6965588e8b3882e4ead8595b1672ea03, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u0414\u0432\u0438\u0433\u0430\u0442\u0435\u043B\u044C
+      \u0438\u043C\u0435\u0442\u044C \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u044B!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &995852056
 GameObject:
   m_ObjectHideFlags: 0
@@ -9745,6 +10376,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -19.80521
       objectReference: {fileID: 0}
+    - target: {fileID: 1832484616084893324, guid: c802521bcd2630a4697c4f709ceb96ba, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.0436401
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832484616650541420, guid: c802521bcd2630a4697c4f709ceb96ba, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.1345215
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476730075289251351, guid: c802521bcd2630a4697c4f709ceb96ba, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.33575058
+      objectReference: {fileID: 0}
     - target: {fileID: 7635454752070758050, guid: c802521bcd2630a4697c4f709ceb96ba, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10399,6 +11042,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 626776576348887884, guid: f0bfa9205a8308c479c544f2ce208e78, type: 3}
   m_PrefabInstance: {fileID: 1120808324}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1123738978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123738979}
+  - component: {fileID: 1123738980}
+  m_Layer: 0
+  m_Name: Random_CC_SilencePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1123738979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123738978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123738980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123738978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: 43a1a6b8a224baf408113c57bd4f84fc, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u0421\u0442\u0430\u0442\u044C
+      \u043F\u043E\u0434\u043E\u0437\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u043E
+      \u0442\u0438\u0445\u043E.\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430
+      \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C \u0442\u043E \u0436\u0435
+      \u0441\u0430\u043C\u043E\u0435!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1143585349
 GameObject:
   m_ObjectHideFlags: 0
@@ -12349,6 +13049,66 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389515640}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1393563912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393563913}
+  - component: {fileID: 1393563914}
+  m_Layer: 0
+  m_Name: LiveHouse_First_UngermitizationPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1393563913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393563912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1393563914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393563912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: ffe7dfeea87bad1498b1143b1ed577f1, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D, \u043C\u044B \u0438\u043C\u0435\u0442\u044C
+      \u0443\u043D\u0438\u043A\u0430\u043B\u044C\u043D\u044B\u0439 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
+      \u0432\u044B\u043A\u0438\u0434\u044B\u0432\u0430\u0442\u044C \u043A\u043E\u0442\u0430!
+      \u0420\u0430\u0437\u0433\u0435\u0440\u043C\u0435\u0442\u0438\u0437\u0430\u0446\u0438\u044F
+      \u0432 \u0436\u0438\u043B\u043E\u0439 \u043E\u0442\u0441\u0435\u043A! \u041F\u043E
+      \u043C\u043E\u0439 \u0440\u0430\u0441\u0447\u0451\u0442, \u0436\u0438\u0432\u043E\u0442\u043D\u044B\u0439
+      \u0434\u043E\u043B\u0436\u0435\u043D \u0443\u043C\u0438\u0440\u0430\u0442\u044C
+      \u0432 \u0431\u043B\u0438\u0436\u0430\u0439\u0448\u0438\u0439 \u0432\u0440\u0435\u043C\u044F."
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1393594035
 GameObject:
   m_ObjectHideFlags: 0
@@ -12377,6 +13137,23 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1652942506}
+  - {fileID: 409121260}
+  - {fileID: 448669761}
+  - {fileID: 221288932}
+  - {fileID: 403792427}
+  - {fileID: 152552823}
+  - {fileID: 1910140951}
+  - {fileID: 1607207588}
+  - {fileID: 1700084870}
+  - {fileID: 1806536639}
+  - {fileID: 981509509}
+  - {fileID: 1419677165}
+  - {fileID: 1123738979}
+  - {fileID: 1493443995}
+  - {fileID: 127533129}
+  - {fileID: 671782807}
+  - {fileID: 1393563913}
+  - {fileID: 276832625}
   m_Father: {fileID: 238729397}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12711,6 +13488,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 626776576348887884, guid: f0bfa9205a8308c479c544f2ce208e78, type: 3}
   m_PrefabInstance: {fileID: 1419471916}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1419677164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1419677165}
+  - component: {fileID: 1419677166}
+  m_Layer: 0
+  m_Name: Random_ReactorPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1419677165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419677164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1419677166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419677164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: 02727d4049b3ec04fa3ec16289d523ad, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u0420\u0435\u0430\u043A\u0442\u043E\u0440
+      \u0442\u0440\u0435\u0432\u043E\u0436\u0438\u0442\u044C \u043C\u0435\u043D\u044F!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1435372283
 GameObject:
   m_ObjectHideFlags: 0
@@ -13256,6 +14087,62 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462405531}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1493443994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1493443995}
+  - component: {fileID: 1493443996}
+  m_Layer: 0
+  m_Name: Random_Scafandr_OverchargePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1493443995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493443994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1493443996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493443994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: d6099524c63d13c4ba969a00bf25dd53, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u0412\u0430\u0448 \u0441\u043A\u0430\u0444\u0430\u043D\u0434\u0440
+      \u043F\u043B\u043E\u0445\u043E \u0437\u0430\u0440\u044F\u0436\u0430\u0442\u044C\u0441\u044F.
+      \u042F \u043F\u043E\u0434\u043E\u0437\u0440\u0435\u0432\u0430\u0442\u044C,
+      \u0447\u0442\u043E \u044D\u0442\u043E \u043A\u043E\u0442 \u0432\u0438\u043D\u043E\u0432\u0430\u0442."
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &1504138912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2276449536174757876, guid: 538d76cfa01a45747ac0e0bfdb812cc5, type: 3}
@@ -14035,6 +14922,66 @@ Transform:
   m_Father: {fileID: 365912713}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1607207587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1607207588}
+  - component: {fileID: 1607207589}
+  m_Layer: 0
+  m_Name: Random_UngemeritisationPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1607207588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607207587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1607207589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607207587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: cd62266eae73adc48bddad2f67dfed91, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u043B\u0443\u0447\u0438\u0442\u044C\u0441\u044F
+      \u0440\u0430\u0437\u0433\u0435\u0440\u043C\u0435\u0442\u0438\u0437\u0430\u0446\u0438\u044F
+      \u0432 \u043E\u0434\u0438\u043D \u0438\u0437 \u043E\u0442\u0441\u0435\u043A\u043E\u0432!
+      \u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u0441\u0440\u043E\u0447\u043D\u043E
+      \u0438\u0437\u043E\u043B\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0435\u0433\u043E.
+      \u0418\u043B\u0438 \u0432\u044B \u043C\u043E\u0447\u044C \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
+      \u0438\u0437\u043E\u043B\u0435\u043D\u0442\u0430! \u0417\u0430\u0434\u0435\u043B\u0430\u0442\u044C
+      \u0431\u0440\u0435\u0448\u044C."
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &1608619969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5607636541283468071, guid: 663ebc4fa17756440bdbad1ba952a560, type: 3}
@@ -14468,7 +15415,23 @@ MonoBehaviour:
   debug: 0
   used: 0
   replicDispether: {fileID: 9888873}
-  replicas: []
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: 463be1d2f210da34bb4e6ce221e1aa4f, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u0421\u0438\u0441\u0442\u0435\u043C\u044B
+      \u043A\u043E\u0440\u0430\u0431\u043B\u044F \u0438\u043C\u0435\u0442\u044C \u043F\u043E\u043B\u043E\u043C\u043A\u0430!
+      \u0412\u0430\u043C \u043D\u0430\u0434\u043E \u0441\u0435\u0439\u0447\u0430\u0441
+      \u044F\u0432\u043B\u044F\u0442\u044C\u0441\u044F \u043D\u0430 \u043C\u043E\u0441\u0442\u0438\u043A
+      \u0438 \u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
+  - role: {fileID: 11400000, guid: b786e6c48a497e94e8b1ddef5fa3cf38, type: 2}
+    clip: {fileID: 8300000, guid: 7ba737a6cf4cccb45b73c3ecfc859d42, type: 3}
+    replicText: "\u0418\u0434\u0443"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &1658271947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14675,6 +15638,67 @@ Transform:
   m_Father: {fileID: 1099945179}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1700084869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700084870}
+  - component: {fileID: 1700084871}
+  m_Layer: 0
+  m_Name: Random_Door_CrashPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700084870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700084869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700084871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700084869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: d6662b1f88327324aa1e260ad54cd576, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D. \u041E\u0434\u0438\u043D
+      \u0438\u0437 \u0434\u0432\u0435\u0440\u044C \u0441\u0435\u0440\u044C\u0451\u0437\u043D\u043E
+      \u0441\u0431\u043E\u0438\u0442\u044C! \u042D\u0442\u043E \u043C\u043E\u0436\u0435\u0442
+      \u0431\u044B\u0442\u044C \u043E\u043F\u0430\u0441\u043D\u044B\u0439 \u044D\u0444\u0444\u0435\u043A\u0442
+      \u0434\u043B\u044F \u0432\u0430\u0441. \u0412\u0430\u043C \u043D\u0443\u0436\u043D\u043E
+      \u043D\u0430\u0434\u0435\u0442\u044C \u0441\u043A\u0430\u0444\u0430\u043D\u0434\u0440
+      \u0438 \u043D\u0430\u0434\u0435\u044F\u0442\u044C\u0441\u044F, \u0447\u0442\u043E
+      \u044D\u0442\u0438 \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u044B \u0443\u0431\u0438\u0442\u044C
+      \u043A\u043E\u0442\u0430!"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1700197310
 GameObject:
   m_ObjectHideFlags: 0
@@ -16044,6 +17068,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4021227934727288702, guid: 6517d16348abb4b48bec01875ca6db98, type: 3}
   m_PrefabInstance: {fileID: 1805523355}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1806536638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1806536639}
+  - component: {fileID: 1806536640}
+  m_Layer: 0
+  m_Name: Random_Life_StationPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1806536639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806536638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1806536640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806536638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: bb9a94f26bfb34945921c33e8391ac09, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u0421\u0438\u0441\u0442\u0435\u043C\u0430
+      \u0436\u0438\u0437\u043D\u0435\u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F
+      \u043D\u0435\u0438\u0441\u043F\u0440\u0430\u0432\u043D\u0430"
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1812077457
 GameObject:
   m_ObjectHideFlags: 0
@@ -16739,6 +17818,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 626776576348887884, guid: f0bfa9205a8308c479c544f2ce208e78, type: 3}
   m_PrefabInstance: {fileID: 1886641658}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1910140950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910140951}
+  - component: {fileID: 1910140952}
+  m_Layer: 0
+  m_Name: Random_Fire_Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1910140951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910140950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1393594036}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1910140952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910140950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0523488eb6f4e44b3f29e3582b6afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  used: 0
+  replicDispether: {fileID: 9888873}
+  replicas:
+  - role: {fileID: 11400000, guid: bae09c989ac69604da7e97e20e810808, type: 2}
+    clip: {fileID: 8300000, guid: 704b0bd4601b4ba4fa4905ea775c35d4, type: 3}
+    replicText: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D! \u0412\u043E\u0437\u0433\u0430\u0440\u0430\u043D\u0438\u0435
+      \u0432 \u043E\u0434\u0438\u043D \u0438\u0437 \u043E\u0442\u0441\u0435\u043A\u043E\u0432.
+      \u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043D\u0435\u043C\u0435\u0434\u043B\u0435\u043D\u043D\u043E
+      \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u043E\u0433\u043D\u0435\u0442\u0443\u0448\u0438\u0442\u0435\u043B\u0435\u043C.
+      \u041B\u0438\u0431\u043E \u0432\u044B\u043A\u0430\u0447\u0430\u0442\u044C \u0432\u043E\u0437\u0434\u0443\u0445
+      \u0438\u0437 \u043E\u0442\u0441\u0435\u043A\u0430."
+    afterReplicaAction:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1929879400
 GameObject:
   m_ObjectHideFlags: 0
