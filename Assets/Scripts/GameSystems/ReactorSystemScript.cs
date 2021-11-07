@@ -9,6 +9,10 @@ public class ReactorSystemScript : MonoBehaviour
 {
     [SerializeField]
     public ReactorSystem reactorSystem = ReactorSystem.Instant;
+    private void Start()
+    {
+        reactorSystem.CurrentMaxEnergy = reactorSystem.MaxEnergy;
+    }
 }
 
 [Serializable]
@@ -29,6 +33,8 @@ public class ReactorSystem : EnergyRelay
             instant = value;
         }
     }
+
+
     private static ReactorSystem instant;
 
     private ReactorSystem() 
@@ -42,5 +48,20 @@ public class ReactorSystem : EnergyRelay
     #endregion
 
     public new List<EnergyRelay> Acceptors = new List<EnergyRelay>();
+
+    public int CurrentMaxEnergy;
+
+    public float CurOverheat
+    {
+        get => curOverheat; 
+        set
+        {
+            OverheatChanged?.Invoke(value);
+            curOverheat = value;
+        }
+    }
+    public Action<float> OverheatChanged;
+    private float curOverheat = 0f;
+    public float maxOverheat = 100f;
 
 }
