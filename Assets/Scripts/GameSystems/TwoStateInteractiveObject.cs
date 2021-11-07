@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TwoStateInteractiveObject : InteractiveObject
 {
-    [SerializeField] private List<LogicModule> modules;
+    [SerializeField] protected List<LogicModule> modules;
 
     [SerializeField] private string secondStateMessage;
 
@@ -18,9 +18,14 @@ public class TwoStateInteractiveObject : InteractiveObject
 
     protected override void Command(ToolController toolController = null)
     {
+        ActivateModulesWithChangeState();
+        defaultMessageChanged?.Invoke();
+    }
+
+    protected virtual void ActivateModulesWithChangeState()
+    {
         firstState = !firstState;
         defaultMessage = firstState ? firstStateMessage : secondStateMessage;
-        defaultMessageChanged?.Invoke();
 
         for (int i = 0; i < modules.Count; i++)
         {

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class RoomLight : TwoStateInteractiveObject, IHaveEnergy
 {
-    public List<Light> Lights = new List<Light>();
     public bool OnOff
     {
         get
@@ -14,10 +13,7 @@ public class RoomLight : TwoStateInteractiveObject, IHaveEnergy
         }
         set
         {
-            foreach(var l in Lights)
-            {
-                l.enabled = value;
-            }
+            ActivateModulesWithChangeState();
             onOff = value;
         }
     }
@@ -57,21 +53,8 @@ public class RoomLight : TwoStateInteractiveObject, IHaveEnergy
 
     protected override void Command(ToolController toolController = null)
     {
-        base.Command();
-
         if (Energy)
             OnOff = !OnOff;
-    }
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        defaultMessageChanged?.Invoke();
     }
 }
