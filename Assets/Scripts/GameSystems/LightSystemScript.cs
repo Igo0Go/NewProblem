@@ -31,6 +31,7 @@ public class LightSystem : EnergyRelay
 
     private LightSystem() { }
     #endregion
+    public List<RoomLight> acceptors = new List<RoomLight>();
 
-    public new List<RoomLight> Acceptors = new List<RoomLight>();
+    public override int GetMaxEnergy() => acceptors.Select(c => c.Capasity).Sum();
 }

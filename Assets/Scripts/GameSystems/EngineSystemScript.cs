@@ -13,6 +13,7 @@ public class EngineSystemScript : MonoBehaviour
 [Serializable]
 public class EngineSystem : EnergyRelay
 {
+    public float DistancePerSec = 0.00625f;
     public float DistanceGoal = 10f;
     [SerializeField] private float currentDistance = 0f;
     public float CurrentDistance
@@ -47,9 +48,8 @@ public class EngineSystem : EnergyRelay
 
     private EngineSystem() { }
     #endregion
+    public List<Engine> acceptors = new List<Engine>();
 
-    public new List<Engine> Acceptors = new List<Engine>();
-
-
+    public override int GetMaxEnergy() => acceptors.Select(c => c.Capasity).Sum();
 }
 

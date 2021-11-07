@@ -2794,7 +2794,7 @@ MonoBehaviour:
   lightSystem:
     CurrentEnergy: 0
     UsedEnergy: 0
-    Acceptors: []
+    acceptors: []
 --- !u!114 &219205320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2810,12 +2810,7 @@ MonoBehaviour:
   healSystem:
     CurrentEnergy: 0
     UsedEnergy: 0
-    Acceptors:
-    - {fileID: 1395573516}
-    - {fileID: 708066753}
-    - {fileID: 1216299742}
-    - {fileID: 219205318}
-    - {fileID: 1624373334}
+    acceptors: []
     currentGasValue: 100
     maxGas: 100
 --- !u!114 &219205321
@@ -2833,11 +2828,10 @@ MonoBehaviour:
   engineSystem:
     CurrentEnergy: 0
     UsedEnergy: 0
+    DistancePerSec: 0.00625
     DistanceGoal: 60
     currentDistance: 10.277306
-    Acceptors:
-    - {fileID: 328931003}
-    - {fileID: 224621335}
+    acceptors: []
 --- !u!114 &219205322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2853,15 +2847,7 @@ MonoBehaviour:
   doorSystem:
     CurrentEnergy: 0
     UsedEnergy: 0
-    Acceptors:
-    - {fileID: 2000825939}
-    - {fileID: 213896061}
-    - {fileID: 2123116842}
-    - {fileID: 1855850334}
-    - {fileID: 1595916563}
-    - {fileID: 1105916904}
-    - {fileID: 740314196}
-    - {fileID: 1706623652}
+    acceptors: []
 --- !u!114 &219205323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2877,9 +2863,7 @@ MonoBehaviour:
   cabinSystem:
     CurrentEnergy: 0
     UsedEnergy: 0
-    Acceptors:
-    - {fileID: 1532856134}
-    - {fileID: 88666460}
+    acceptors: []
 --- !u!114 &219205324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2895,17 +2879,6 @@ MonoBehaviour:
   reactorSystem:
     CurrentEnergy: 0
     UsedEnergy: 0
-    Acceptors:
-    - CurrentEnergy: 0
-      UsedEnergy: 0
-    - CurrentEnergy: 0
-      UsedEnergy: 0
-    - CurrentEnergy: 0
-      UsedEnergy: 0
-    - CurrentEnergy: 0
-      UsedEnergy: 0
-    - CurrentEnergy: 0
-      UsedEnergy: 0
     CurrentMaxEnergy: 0
     maxOverheat: 100
 --- !u!4 &220811686 stripped
@@ -2922,17 +2895,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d5612010bbe0354ab62f2fe627f4703, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &224621335 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3913401361044573017, guid: dec7366fec72de8418bcda2af6ebbde9, type: 3}
-  m_PrefabInstance: {fileID: 1231253829}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc54dc413b22347488e9266608daa51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &225672248 stripped
@@ -3985,17 +3947,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6381356175885465824, guid: cdb5f65fb01cbb145959a286f754fe9d, type: 3}
---- !u!114 &328931003 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3913401361044573017, guid: dec7366fec72de8418bcda2af6ebbde9, type: 3}
-  m_PrefabInstance: {fileID: 682017967}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc54dc413b22347488e9266608daa51f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &332101592
 GameObject:
   m_ObjectHideFlags: 0
@@ -7008,7 +6959,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 62
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9169,12 +9120,7 @@ MonoBehaviour:
   healthSystem:
     CurrentEnergy: 0
     UsedEnergy: 0
-    Acceptors:
-    - {fileID: 1395573516}
-    - {fileID: 708066753}
-    - {fileID: 1216299742}
-    - {fileID: 219205318}
-    - {fileID: 1624373334}
+    acceptors: []
     currentGasValue: 100
     maxGas: 100
 --- !u!1 &945097751
@@ -14266,17 +14212,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 76863379513495265, guid: 0c908f6339044904b9da2e184017840a, type: 3}
   m_PrefabInstance: {fileID: 76863381046217123}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1532856134 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 76863379513495269, guid: 0c908f6339044904b9da2e184017840a, type: 3}
-  m_PrefabInstance: {fileID: 76863381046217123}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd3baaf1f89394e4e8b2a6670b24431f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1546556804
 GameObject:
   m_ObjectHideFlags: 0

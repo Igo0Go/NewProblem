@@ -11,12 +11,12 @@ public class ReactorSystemScript : MonoBehaviour
     public ReactorSystem reactorSystem = ReactorSystem.Instant;
     private void Start()
     {
-        reactorSystem.CurrentMaxEnergy = reactorSystem.MaxEnergy;
+        reactorSystem.CurrentMaxEnergy = reactorSystem.GetMaxEnergy();
     }
 }
 
 [Serializable]
-public class ReactorSystem : EnergyRelay
+public class ReactorSystem
 {
     #region singletone
 
@@ -37,23 +37,43 @@ public class ReactorSystem : EnergyRelay
 
     private static ReactorSystem instant;
 
-    private ReactorSystem() 
+    private ReactorSystem()
     {
-        Acceptors.Add(HealthSystem.Instant);
-        Acceptors.Add(DoorSystem.Instant);
-        Acceptors.Add(LightSystem.Instant);
-        Acceptors.Add(CabinSystem.Instant);
-        Acceptors.Add(EngineSystem.Instant);
+        acceptors.Add(EngineSystem.Instant);
+        acceptors.Add(HealthSystem.Instant);
+        acceptors.Add(DoorSystem.Instant);
+        acceptors.Add(LightSystem.Instant);
+        acceptors.Add(CabinSystem.Instant);
     }
     #endregion
 
-    public new List<EnergyRelay> Acceptors = new List<EnergyRelay>();
+    public bool Energy { get => CurrentEnergy > 0; set { } }
+    public int Capasity { get => GetMaxEnergy(); set { } }
+
+    public int CurrentEnergy = 0;
+    public int UsedEnergy = 0;
+
+    public int GetMaxEnergy()
+    {
+        var sum = 0;
+        int count = Acceptors.Count();
+        for (int i = 0; i < count; i++)
+        {
+            var ac = Acceptors[i];
+            sum += ac.Capasity;
+        }
+        return sum;
+    }
+
+    public List<EnergyRelay> Acceptors { get => acceptors; set => acceptors = value; }
+    public List<EnergyRelay> acceptors = new List<EnergyRelay>();
+
 
     public int CurrentMaxEnergy;
 
     public float CurOverheat
     {
-        get => curOverheat; 
+        get => curOverheat;
         set
         {
             OverheatChanged?.Invoke(value);

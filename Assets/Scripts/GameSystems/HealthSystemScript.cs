@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ public class HealthSystem : EnergyRelay
     private HealthSystem() { }
     #endregion
 
-    public new List<Room> Acceptors = new List<Room>();
+    public List<Room> acceptors = new List<Room>();
     public float CurrentStateValue
     {
         get
@@ -52,6 +53,8 @@ public class HealthSystem : EnergyRelay
     public float maxGas = 100;
 
     public event Action NeedGas;
+
+    public override int GetMaxEnergy() => acceptors.Select(c => c.Capasity).Sum();
 }
 
 

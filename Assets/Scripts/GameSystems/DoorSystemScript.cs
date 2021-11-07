@@ -32,6 +32,7 @@ public class DoorSystem : EnergyRelay
 
     private DoorSystem()    {    }
     #endregion
+    public List<Door> acceptors = new List<Door>();
 
-    public new List<Door> Acceptors = new List<Door>();
+    public override int GetMaxEnergy() => acceptors.Select(c => c.Capasity).Sum();
 }

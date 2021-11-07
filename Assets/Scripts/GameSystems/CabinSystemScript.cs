@@ -32,7 +32,7 @@ public class CabinSystem : EnergyRelay
 
     private CabinSystem() { }
     #endregion
-
-    public new List<InterectiveEnergy> Acceptors = new List<InterectiveEnergy>();
+    public List<InterectiveEnergy> acceptors = new List<InterectiveEnergy>();
+    public override int GetMaxEnergy() => acceptors.Select(c => c.Capasity).Sum();
 }
 
