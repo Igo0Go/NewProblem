@@ -50,6 +50,11 @@ public class Door : TwoStateInteractiveObject, IHaveEnergy
         }
     }
 
+    public bool IsBreak
+    {
+        get; set;
+    }
+
     public int Capasity { get => capasity; set => capasity = value; }
 
     [Header("Не трогать")]

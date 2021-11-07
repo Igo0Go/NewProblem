@@ -16,6 +16,8 @@ public class AstroSuitStation : InterectiveEnergy
     [SerializeField] private Slider chargeValueSlider;
     [SerializeField] private float maxSuitEnergy;
 
+    //hi
+
     private void Awake()
     {
         currentSuitEnergy = maxSuitEnergy;
