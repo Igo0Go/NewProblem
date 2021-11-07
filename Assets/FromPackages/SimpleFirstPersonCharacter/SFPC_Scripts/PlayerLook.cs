@@ -2,19 +2,19 @@ using System.Collections;
 using UnityEngine;
 
 /// <summary>
-/// Скрипт обзора камерой
+/// РЎРєСЂРёРїС‚ РѕР±Р·РѕСЂР° РєР°РјРµСЂРѕР№
 /// </summary>
 [HelpURL("https://docs.google.com/document/d/1llgWK3zJK7km7DMyi_GHh63LZUJngJppIuZIfccWwtc/edit?usp=sharing")]
 public class PlayerLook : MonoBehaviour
 {
-    [SerializeField, Tooltip("Объект - камера")] private Transform cam;
-    [SerializeField, Tooltip("Объект - пустышка, в которой находится камера")] private Transform camBufer;
-    [SerializeField, Range(0, 2), Tooltip("Чувствительность камеры по горизонтали")]
+    [SerializeField, Tooltip("РћР±СЉРµРєС‚ - РєР°РјРµСЂР°")] private Transform cam;
+    [SerializeField, Tooltip("РћР±СЉРµРєС‚ - РїСѓСЃС‚С‹С€РєР°, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РєР°РјРµСЂР°")] private Transform camBufer;
+    [SerializeField, Range(0, 2), Tooltip("Р§СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ РєР°РјРµСЂС‹ РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё")]
     private float sensitivityHor = 0.5f;
-    [SerializeField, Range(0, 2), Tooltip("Чувствительность камеры по вертикали")]
+    [SerializeField, Range(0, 2), Tooltip("Р§СѓРІСЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚СЊ РєР°РјРµСЂС‹ РїРѕ РІРµСЂС‚РёРєР°Р»Рё")]
     private float sensitivityVert = 0.5f;
-    [SerializeField, Tooltip("Ограничение угла камеры снизу"), Range(-90, 0)] private float minimumVert = -45.0f;
-    [SerializeField, Tooltip("Ограничение угла камеры сверху"), Range(0, 90)] private float maximumVert = 45.0f;
+    [SerializeField, Tooltip("РћРіСЂР°РЅРёС‡РµРЅРёРµ СѓРіР»Р° РєР°РјРµСЂС‹ СЃРЅРёР·Сѓ"), Range(-90, 0)] private float minimumVert = -45.0f;
+    [SerializeField, Tooltip("РћРіСЂР°РЅРёС‡РµРЅРёРµ СѓРіР»Р° РєР°РјРµСЂС‹ СЃРІРµСЂС…Сѓ"), Range(0, 90)] private float maximumVert = 45.0f;
 
     private float _rotationX = 0;
     private bool opportunityToView;
@@ -44,9 +44,9 @@ public class PlayerLook : MonoBehaviour
     }
 
     /// <summary>
-    /// Задать видимость курсора
+    /// Р—Р°РґР°С‚СЊ РІРёРґРёРјРѕСЃС‚СЊ РєСѓСЂСЃРѕСЂР°
     /// </summary>
-    /// <param name="value">Можно ли пользоваться курсором</param>
+    /// <param name="value">РњРѕР¶РЅРѕ Р»Рё РїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ РєСѓСЂСЃРѕСЂРѕРј</param>
     public void SetCursorVisible(bool value)
     {
         if(value)
@@ -62,9 +62,9 @@ public class PlayerLook : MonoBehaviour
     }
 
     /// <summary>
-    /// Плавно переместить камеру к точке обзора
+    /// РџР»Р°РІРЅРѕ РїРµСЂРµРјРµСЃС‚РёС‚СЊ РєР°РјРµСЂСѓ Рє С‚РѕС‡РєРµ РѕР±Р·РѕСЂР°
     /// </summary>
-    /// <param name="lookPoint">точка обзора</param>
+    /// <param name="lookPoint">С‚РѕС‡РєР° РѕР±Р·РѕСЂР°</param>
     public void ToLookPointState(Transform lookPoint)
     {
         _rotationX = 0;
@@ -73,7 +73,7 @@ public class PlayerLook : MonoBehaviour
     }
 
     /// <summary>
-    /// Вернуть камеру к геймплейному режиму
+    /// Р’РµСЂРЅСѓС‚СЊ РєР°РјРµСЂСѓ Рє РіРµР№РјРїР»РµР№РЅРѕРјСѓ СЂРµР¶РёРјСѓ
     /// </summary>
     public void ToDefaultState()
     {

@@ -7,7 +7,7 @@ public class ToolItem : MonoBehaviour
 
     public string GetMessage()
     {
-        return "E - " + "подобрать " + GetToolName(type);
+        return "E - " + "РїРѕРґРѕР±СЂР°С‚СЊ " + GetToolName(type);
     }
 
     public static string GetToolName(ToolType type)
@@ -16,16 +16,16 @@ public class ToolItem : MonoBehaviour
         switch (type)
         {
             case ToolType.DuctTape:
-                result = "Изолента";
+                result = "РР·РѕР»РµРЅС‚Р°";
                 break;
             case ToolType.Drone:
-                result = "Ремонтный дрон";
+                result = "Р РµРјРѕРЅС‚РЅС‹Р№ РґСЂРѕРЅ";
                 break;
             case ToolType.FireExtinguisher:
-                result = "Огнетушитель";
+                result = "РћРіРЅРµС‚СѓС€РёС‚РµР»СЊ";
                 break;
             case ToolType.OxygenTank:
-                result = "Кислородный баллон";
+                result = "РљРёСЃР»РѕСЂРѕРґРЅС‹Р№ Р±Р°Р»Р»РѕРЅ";
                 break;
         }
         return result;
