@@ -45,7 +45,11 @@ public class UI_CabinManager : MonoBehaviour
         button.IndexCurrEn = interectiveEnergy.CurrentEnergy - 1;
 
         button.Colored();
+        ReCalcReactorUsedEnergy();
+    }
+    public void ReCalcReactorUsedEnergy()
+    {
+        cabinSystem.UsedEnergy = cabinSystem.acceptors.Select(c => c.CurrentEnergy).Sum();
         Power.SetUsedEn(cabinSystem.UsedEnergy);
     }
-
 }

@@ -56,6 +56,8 @@ public class HealthSystem : EnergyRelay
     public event Action NeedGas;
 
     public override int GetMaxEnergy() => acceptors.Select(c => c.Capasity).Sum();
+
+    public override int UsedEnergy { get => acceptors.Where(c => c.Energy).Select(c => c).Count(); }
 }
 
 

@@ -28,14 +28,6 @@ public class Door : TwoStateInteractiveObject, IHaveEnergy
         }
         set
         {
-            if (value)
-            {
-                energyRelay.UsedEnergy--;
-            }
-            else
-            {
-                energyRelay.UsedEnergy++;
-            }
 
             if (!value)
                 Open = false;
