@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InteractiveObject
   - ToolItem
+  - DamageZone
   layers:
   - Default
   - TransparentFX
