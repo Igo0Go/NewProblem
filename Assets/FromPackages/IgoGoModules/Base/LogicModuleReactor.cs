@@ -6,7 +6,7 @@
 [HelpURL("https://docs.google.com/document/d/13twCVY4ZIH703ITRmfQk5E3lZHeE70QPFVjIvLkaRBE/edit?usp=sharing")]
 public class LogicModuleReactor : MonoBehaviour
 {
-    public static string interactiveTag = "Interaction";
+    public static string interactiveTag = "InteractiveZone";
 
     private void OnTriggerEnter(Collider other)
     {

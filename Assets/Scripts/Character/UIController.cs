@@ -29,6 +29,14 @@ public class UIController : MonoBehaviour
         ChangeMessage(string.Empty);
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     private void ChangeMessage(string newMessage)
     {
         messageText.text = newMessage;

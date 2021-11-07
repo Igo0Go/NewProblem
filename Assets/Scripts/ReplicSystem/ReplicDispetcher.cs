@@ -41,9 +41,9 @@ public class ReplicDispetcher : MonoBehaviour
         yield return new WaitForSeconds(time);
         bufer?.afterReplicaAction?.Invoke();
         source.Stop();
-        
+
         if (replicas.Count > 0)
-            StartCoroutine(StartReplica());
+            StartReplica();
         else
         {
             bufer = null;
@@ -53,26 +53,16 @@ public class ReplicDispetcher : MonoBehaviour
             replicPanel.SetActive(false);
         }
     }
-    private IEnumerator StartReplica()
+    private void StartReplica()
     {
         bufer = replicas[0];
-
         source.clip = bufer.clip;
-
-        replicText.CrossFadeAlpha(0, 0.5f, true);
-
-        yield return new WaitForSeconds(0.5f);
-
         replicText.text = bufer.replicText;
         replicText.color = bufer.role.roleTextColor;
-        //speackerImage.sprite = bufer.role.roleIcon;
-        replicText.CrossFadeAlpha(1, 0.5f, true);
-        yield return new WaitForSeconds(0.5f);
         source.Play();
         StartCoroutine(CheckReplicas(source.clip.length + 0.3f));
         replicas.Remove(replicas[0]);
     }
-
 }
 
 [Serializable]
