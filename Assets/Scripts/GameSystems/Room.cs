@@ -39,14 +39,7 @@ public class Room : MonoBehaviour, IHaveEnergy
         }
         set
         {
-            if (value)
-            {
-                energyRelay.UsedEnergy--;
-            }
-            else
-            {
-                energyRelay.UsedEnergy++;
-            }
+            
             AutoOxygen = value;
             energy = value;
         }
@@ -64,7 +57,7 @@ public class Room : MonoBehaviour, IHaveEnergy
                 oxygen = true;
             }
 
-            
+
             autoOxygen = value;
         }
     }

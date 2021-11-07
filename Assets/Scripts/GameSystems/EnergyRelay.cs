@@ -7,10 +7,12 @@ using UnityEngine;
 public abstract class EnergyRelay : IHaveEnergy, IHaveMaxEnergy
 {
     public bool Energy { get => CurrentEnergy > 0; set { } }
-    public int Capasity { get => GetMaxEnergy(); set {  } }
+    public int Capasity { get => GetMaxEnergy(); set { } }
 
-    public int CurrentEnergy = 0;
-    public int UsedEnergy = 0;
+    public virtual int CurrentEnergy { get => currentEnergy; set => currentEnergy = value; }
+    public virtual int UsedEnergy { get => usedEnergy; set => usedEnergy = value; }
+    [SerializeField] private int currentEnergy;
+    [SerializeField] private int usedEnergy;
 
     public abstract int GetMaxEnergy();
 }

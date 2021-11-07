@@ -34,4 +34,5 @@ public class LightSystem : EnergyRelay
     public List<RoomLight> acceptors = new List<RoomLight>();
 
     public override int GetMaxEnergy() => acceptors.Select(c => c.Capasity).Sum();
+    public override int UsedEnergy { get => acceptors.Where(c => c.Energy).Select(c => c).Count(); }
 }

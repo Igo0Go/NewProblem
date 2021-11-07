@@ -26,18 +26,7 @@ public class RoomLight : TwoStateInteractiveObject, IHaveEnergy
         }
         set
         {
-            if (value)
-            {
-                energyRelay.UsedEnergy--;
-            }
-            else
-            {
-                energyRelay.UsedEnergy++;
-            }
-
-            if (value)
-                OnOff = false;
-
+            OnOff = value;
             energy = value;
         }
     }
