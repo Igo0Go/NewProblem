@@ -14,8 +14,8 @@ public class EventInvokeModule : LogicModule
     public override void ActivateModule()
     {
         logicEvent?.Invoke();
-        DeleteMeFromActors();
-        Destroy(gameObject);
+//        DeleteMeFromActors();
+//        Destroy(gameObject);
     }
 
     public override void ReturnToDefaultState()
